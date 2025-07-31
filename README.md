@@ -1,0 +1,2 @@
+# mindtest
+SOVAC mindtest
