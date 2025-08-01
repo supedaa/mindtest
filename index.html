@@ -6,17 +6,54 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>놀이돌봄 유형 테스트</title>
   <style>
-    body { font-family: 'Arial', sans-serif; padding: 20px; line-height: 1.6; }
+    <head>
+  ...
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+    }
+
     .hidden { display: none; }
-    .question, .intro, .form, .result { margin-bottom: 30px; }
-    button { padding: 10px 20px; margin-top: 20px; }
+    .question, .form, .result { margin-bottom: 30px; }
+
+    .intro {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+      background-color: #3c2c39;
+      color: white;
+    }
+
+    .intro-image {
+      width: 200px;
+      margin-bottom: 20px;
+    }
+
+    button {
+      padding: 10px 20px;
+      margin-top: 20px;
+    }
   </style>
 </head>
 <body>
   <div class="intro">
-    <img src="your-image-path.png" alt="인트로 이미지" class="intro-image" />
+    <img src="./images/intro.png" alt="인트로 이미지" class="intro-image" />
     <h1>내가 놀이돌봄 선생님이 된다면?</h1>
     <h3>당신에게 어울리는 놀이돌봄 유형은?</h3>
+    <button onclick="startTest()">테스트 시작하기</button>
+  </div>
+
+  </style>
+</head>
+<body>
+  <div class="intro">
+    <h1>내가 놀이돌봄 선생님이 된다면?</h1>
+    <h3>당신에게 어울리는 놀이돌봄 유형은?</h3>
+    <img src="your-image-path.png" alt="인트로 이미지" class="intro-image" />
     <button onclick="startTest()">테스트 시작하기</button>
 </div>
 
