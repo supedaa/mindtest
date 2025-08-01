@@ -51,6 +51,7 @@
     <form id="user-form">
       <label>이름: <input type="text" id="name" required></label><br><br>
       <label>연락처: <input type="text" id="phone" required></label><br><br>
+      <label>출생년도: <input type="text" id="birth" required></label><br><br>
       <label><input type="checkbox" id="agree" required> 개인정보 수집 및 이용동의 (필수)</label><br><br>
       <button type="submit">결과 보기</button>
     </form>
@@ -138,7 +139,7 @@
       const name = document.getElementById("name").value.trim();
       const phone = document.getElementById("phone").value.trim();
       const agree = document.getElementById("agree").checked;
-      if (!name || !phone || !agree) return alert("모든 항목을 입력하고 동의해주세요.");
+      if (!name || !phone || !birth || !agree) return alert("모든 항목을 입력하고 동의해주세요.");
       const resultIndex = mostFrequent(answers);
       const resultText = results[resultIndex];
       document.querySelector(".form").classList.add("hidden");
@@ -150,7 +151,7 @@
           method: "POST",
           mode: "no-cors",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ name, phone, result: resultText })
+          body: JSON.stringify({ name, phone, birth result: resultText })
         });
       } catch (err) {
         console.error("데이터 전송 오류:", err);
