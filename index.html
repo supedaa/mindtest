@@ -9,7 +9,28 @@
     body { font-family: 'Arial', sans-serif; padding: 20px; line-height: 1.6; }
     .hidden { display: none; }
     .question, .intro, .form, .result { margin-bottom: 30px; }
+
+    .intro {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh; /* 화면 전체 세로 가운데 정렬 */
+      text-align: center;
+      background-color: #ffffff;
+      color: black;
+    }
+
+    .intro-image {
+      width: 200px; /* 이미지 너비 */
+      margin-bottom: 20px;
+    }
+    
     button { padding: 10px 20px; margin-top: 20px; }
+    button:hover {
+      background-color: black;
+      color: white;
+    }
   </style>
 </head>
 <body>
